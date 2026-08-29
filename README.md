@@ -24,5 +24,8 @@ Open a PR with a new folder. Every example must:
 1. Have a top-level `README.md` explaining the persona and intended use.
 2. Contain a valid `.mind/` folder (run `npx @modelbound/mind-cli validate`).
 3. Include no secrets.
+4. Include the default **Scope Constraints** block in every `.mind/skills/` file (see mind-spec §10).
 
-Apache 2.0.
+## Migration
+
+If you forked examples before spec 0.2, add `.modelbound/task-budgets.json` and scope blocks to each skill. Run `mind skill-trust .mind/skills/<file>` to verify scanner h5 passes.
